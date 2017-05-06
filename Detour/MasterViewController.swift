@@ -14,7 +14,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,12 +31,43 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard let user = self.currentUser() else {
+            let storyboard = UIStoryboard(name: "LoginRegister", bundle: nil)
+            let loginVC = storyboard.instantiateInitialViewController()!
+            self.present(loginVC, animated: true)
+            return
+        }
+        
+        self.title = "Welcome, " + user.emailAddress!
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    
+    //MARK: - User Management
+    
+    func logOut() {
+
+        // TODO: Delete user
+        // TODO: Delete everything in core data
+    }
+    
+    func currentUser() -> User? {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        let users = try! context.fetch(fetchRequest)
+        return users.first
+    }
+    
     func insertNewObject(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
         let newEvent = Event(context: context)
