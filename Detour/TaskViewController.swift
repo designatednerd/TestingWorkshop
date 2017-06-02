@@ -61,7 +61,6 @@ class TaskViewController: UIViewController, UITextFieldDelegate, UITableViewData
         }
     }
     
-    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -172,7 +171,30 @@ class TaskViewController: UIViewController, UITextFieldDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProConCell", for: indexPath)
+        
+        if indexPath.section == 0 {
+            guard let pros = self.task.pros?.allObjects as? [Pro] else {
+                assertionFailure("Not pros!")
+                return UITableViewCell()
+            }
+            
+            let pro = pros[indexPath.row]
+            cell.textLabel?.text = pro.text
+        } else if indexPath.section == 1 {
+            guard let cons = self.task.cons?.allObjects as? [Con] else {
+                assertionFailure("Not cons!")
+                return UITableViewCell()
+            }
+            
+            let con = cons[indexPath.row]
+            cell.textLabel?.text = con.text
+        } else {
+            assertionFailure("Unhandled section!")
+            return UITableViewCell()
+        }
+        
+        return cell
     }
     
 }
