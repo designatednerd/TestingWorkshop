@@ -114,7 +114,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8">
-                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="EN1-3k-nTy"/>
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="EN1-3k-nTy">
+                            <connections>
+                                <action selector="logOutCurrentUser" destination="7bK-jq-Zjz" id="k0R-5Y-VTM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="c7C-sg-QnA" kind="show" identifier="AddDestinationSegue" id="L4R-fv-7uq"/>
@@ -506,7 +510,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MVl-KQ-9vs"/>
+        <segue reference="L4R-fv-7uq"/>
         <segue reference="nSY-aC-nFc"/>
     </inferredMetricsTieBreakers>
 </document>
