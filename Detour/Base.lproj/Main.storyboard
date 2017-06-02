@@ -251,7 +251,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="0KG-jN-T9I" kind="show" identifier="AddDetour" action="showDetailViewController:sender:" id="ZFY-LX-yC9"/>
+                                            <segue destination="0KG-jN-T9I" kind="show" identifier="AddDetour" id="k2Y-rA-gp8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -280,7 +280,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b0I-Wz-bSd" id="s6h-jv-CIr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
