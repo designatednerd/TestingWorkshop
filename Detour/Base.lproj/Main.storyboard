@@ -247,7 +247,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="0KG-jN-T9I" kind="showDetail" identifier="AddDetour" id="ZFY-LX-yC9"/>
+                                            <segue destination="0KG-jN-T9I" kind="show" identifier="AddDetour" action="showDetailViewController:sender:" id="ZFY-LX-yC9"/>
                                         </connections>
                                     </button>
                                 </subviews>
