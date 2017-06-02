@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9B75DFC61EDF91D200F11AD6 /* DetourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75DFC51EDF91D200F11AD6 /* DetourViewController.swift */; };
 		9B75E54A1EE1405200F11AD6 /* ReallyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75E5491EE1405200F11AD6 /* ReallyBasicTests.swift */; };
+		9B75E5581EE144CA00F11AD6 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75E5571EE144CA00F11AD6 /* LoginUITests.swift */; };
 		9BE413FB1EBE1FA500ACBC40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE413FA1EBE1FA500ACBC40 /* AppDelegate.swift */; };
 		9BE413FE1EBE1FA500ACBC40 /* Detour.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BE413FC1EBE1FA500ACBC40 /* Detour.xcdatamodeld */; };
 		9BE414001EBE1FA500ACBC40 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE413FF1EBE1FA500ACBC40 /* MasterViewController.swift */; };
@@ -31,6 +32,13 @@
 			remoteGlobalIDString = 9BE413F61EBE1FA500ACBC40;
 			remoteInfo = Detour;
 		};
+		9B75E55A1EE144CA00F11AD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BE413EF1EBE1FA500ACBC40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BE413F61EBE1FA500ACBC40;
+			remoteInfo = Detour;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +46,9 @@
 		9B75E5471EE1405200F11AD6 /* DetourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B75E5491EE1405200F11AD6 /* ReallyBasicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReallyBasicTests.swift; sourceTree = "<group>"; };
 		9B75E54B1EE1405200F11AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B75E5551EE144CA00F11AD6 /* DetourXCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetourXCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B75E5571EE144CA00F11AD6 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		9B75E5591EE144CA00F11AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BE413F71EBE1FA500ACBC40 /* Detour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Detour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE413FA1EBE1FA500ACBC40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BE413FD1EBE1FA500ACBC40 /* Detour.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Detour.xcdatamodel; sourceTree = "<group>"; };
@@ -56,6 +67,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		9B75E5441EE1405200F11AD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B75E5521EE144CA00F11AD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,11 +99,21 @@
 			path = DetourTests;
 			sourceTree = "<group>";
 		};
+		9B75E5561EE144CA00F11AD6 /* DetourXCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9B75E5571EE144CA00F11AD6 /* LoginUITests.swift */,
+				9B75E5591EE144CA00F11AD6 /* Info.plist */,
+			);
+			path = DetourXCUITests;
+			sourceTree = "<group>";
+		};
 		9BE413EE1EBE1FA500ACBC40 = {
 			isa = PBXGroup;
 			children = (
 				9BE413F91EBE1FA500ACBC40 /* Detour */,
 				9B75E5481EE1405200F11AD6 /* DetourTests */,
+				9B75E5561EE144CA00F11AD6 /* DetourXCUITests */,
 				9BE413F81EBE1FA500ACBC40 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +123,7 @@
 			children = (
 				9BE413F71EBE1FA500ACBC40 /* Detour.app */,
 				9B75E5471EE1405200F11AD6 /* DetourTests.xctest */,
+				9B75E5551EE144CA00F11AD6 /* DetourXCUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +170,24 @@
 			productReference = 9B75E5471EE1405200F11AD6 /* DetourTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9B75E5541EE144CA00F11AD6 /* DetourXCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B75E55C1EE144CA00F11AD6 /* Build configuration list for PBXNativeTarget "DetourXCUITests" */;
+			buildPhases = (
+				9B75E5511EE144CA00F11AD6 /* Sources */,
+				9B75E5521EE144CA00F11AD6 /* Frameworks */,
+				9B75E5531EE144CA00F11AD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B75E55B1EE144CA00F11AD6 /* PBXTargetDependency */,
+			);
+			name = DetourXCUITests;
+			productName = DetourXCUITests;
+			productReference = 9B75E5551EE144CA00F11AD6 /* DetourXCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		9BE413F61EBE1FA500ACBC40 /* Detour */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BE4140E1EBE1FA500ACBC40 /* Build configuration list for PBXNativeTarget "Detour" */;
@@ -173,6 +220,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9BE413F61EBE1FA500ACBC40;
 					};
+					9B75E5541EE144CA00F11AD6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9BE413F61EBE1FA500ACBC40;
+					};
 					9BE413F61EBE1FA500ACBC40 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
@@ -194,12 +246,20 @@
 			targets = (
 				9BE413F61EBE1FA500ACBC40 /* Detour */,
 				9B75E5461EE1405200F11AD6 /* DetourTests */,
+				9B75E5541EE144CA00F11AD6 /* DetourXCUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9B75E5451EE1405200F11AD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B75E5531EE144CA00F11AD6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,6 +288,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B75E5511EE144CA00F11AD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B75E5581EE144CA00F11AD6 /* LoginUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BE413F31EBE1FA500ACBC40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +319,11 @@
 			isa = PBXTargetDependency;
 			target = 9BE413F61EBE1FA500ACBC40 /* Detour */;
 			targetProxy = 9B75E54C1EE1405200F11AD6 /* PBXContainerItemProxy */;
+		};
+		9B75E55B1EE144CA00F11AD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BE413F61EBE1FA500ACBC40 /* Detour */;
+			targetProxy = 9B75E55A1EE144CA00F11AD6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -297,6 +370,30 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Detour.app/Detour";
+			};
+			name = Release;
+		};
+		9B75E55D1EE144CA00F11AD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DetourXCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.designatednerd.DetourXCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Detour;
+			};
+			name = Debug;
+		};
+		9B75E55E1EE144CA00F11AD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DetourXCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.designatednerd.DetourXCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Detour;
 			};
 			name = Release;
 		};
@@ -427,6 +524,16 @@
 				9B75E5501EE1405300F11AD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B75E55C1EE144CA00F11AD6 /* Build configuration list for PBXNativeTarget "DetourXCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B75E55D1EE144CA00F11AD6 /* Debug */,
+				9B75E55E1EE144CA00F11AD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BE413F21EBE1FA500ACBC40 /* Build configuration list for PBXProject "Detour" */ = {
 			isa = XCConfigurationList;

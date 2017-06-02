@@ -13,6 +13,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
+    var hasTestLoggedOut = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +36,22 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.viewDidAppear(animated)
         
         guard let user = self.currentUser() else {
+            // We do not have an existing user.
+            self.hasTestLoggedOut = true
             let storyboard = UIStoryboard(name: "LoginRegister", bundle: nil)
             let loginVC = storyboard.instantiateInitialViewController()!
             self.present(loginVC, animated: true)
             return
         }
         
+        if (ProcessInfo.processInfo.arguments.contains("TestingLogout") && !self.hasTestLoggedOut)  {
+                // We are testing, log out the existing user (which will show the log in view when done)
+            self.hasTestLoggedOut = true
+            self.logOut()
+            return
+        }
+        
+        // Hey, we've got a user!
         self.title = "Welcome, " + user.emailAddress!
     }
 
