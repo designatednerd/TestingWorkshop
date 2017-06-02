@@ -1,22 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Destination" representedClassName="Destination" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Con" representedClassName="Con" syncable="YES" codeGenerationType="class">
         <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="cons" inverseEntity="Task" syncable="YES"/>
     </entity>
-    <entity name="Event" representedClassName="Event" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date">
-            <userInfo/>
-        </attribute>
-        <userInfo/>
+    <entity name="Destination" representedClassName="Destination" syncable="YES" codeGenerationType="class">
+        <attribute name="arriveDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="departDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="detours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Detour" inverseName="destination" inverseEntity="Detour" syncable="YES"/>
+    </entity>
+    <entity name="Detour" representedClassName="Detour" syncable="YES" codeGenerationType="class">
+        <relationship name="destination" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Destination" inverseName="detours" inverseEntity="Destination" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" maxCount="2" deletionRule="Nullify" destinationEntity="Task" inverseName="detour" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <entity name="Pro" representedClassName="Pro" syncable="YES" codeGenerationType="class">
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="pros" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lengthInHours" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="cons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Con" inverseName="task" inverseEntity="Con" syncable="YES"/>
+        <relationship name="detour" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Detour" inverseName="tasks" inverseEntity="Detour" syncable="YES"/>
+        <relationship name="pros" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pro" inverseName="task" inverseEntity="Pro" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="Destination" positionX="261" positionY="198" width="128" height="75"/>
-        <element name="User" positionX="270" positionY="216" width="128" height="75"/>
+        <element name="Con" positionX="484" positionY="306" width="128" height="90"/>
+        <element name="Destination" positionX="-38" positionY="66" width="128" height="150"/>
+        <element name="Detour" positionX="133" positionY="234" width="128" height="75"/>
+        <element name="Pro" positionX="484" positionY="423" width="128" height="90"/>
+        <element name="Task" positionX="306" positionY="306" width="128" height="195"/>
+        <element name="User" positionX="7" positionY="414" width="128" height="75"/>
     </elements>
 </model>

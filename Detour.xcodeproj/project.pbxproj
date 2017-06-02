@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B75DFC61EDF91D200F11AD6 /* DetourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75DFC51EDF91D200F11AD6 /* DetourViewController.swift */; };
 		9BE413FB1EBE1FA500ACBC40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE413FA1EBE1FA500ACBC40 /* AppDelegate.swift */; };
 		9BE413FE1EBE1FA500ACBC40 /* Detour.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BE413FC1EBE1FA500ACBC40 /* Detour.xcdatamodeld */; };
 		9BE414001EBE1FA500ACBC40 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE413FF1EBE1FA500ACBC40 /* MasterViewController.swift */; };
@@ -17,9 +18,12 @@
 		9BE414121EBE411200ACBC40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE414111EBE411200ACBC40 /* LoginViewController.swift */; };
 		9BE414141EBE411F00ACBC40 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE414131EBE411F00ACBC40 /* RegisterViewController.swift */; };
 		9BE414161EBE49E400ACBC40 /* LoginRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE414151EBE49E400ACBC40 /* LoginRegister.storyboard */; };
+		9BE415F51EBE552900ACBC40 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE415F41EBE552900ACBC40 /* DestinationViewController.swift */; };
+		9BE415F91EBE5F6E00ACBC40 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE415F81EBE5F6E00ACBC40 /* TaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B75DFC51EDF91D200F11AD6 /* DetourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetourViewController.swift; sourceTree = "<group>"; };
 		9BE413F71EBE1FA500ACBC40 /* Detour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Detour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE413FA1EBE1FA500ACBC40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BE413FD1EBE1FA500ACBC40 /* Detour.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Detour.xcdatamodel; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		9BE414111EBE411200ACBC40 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9BE414131EBE411F00ACBC40 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9BE414151EBE49E400ACBC40 /* LoginRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginRegister.storyboard; sourceTree = "<group>"; };
+		9BE415F41EBE552900ACBC40 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
+		9BE415F81EBE5F6E00ACBC40 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +72,12 @@
 			children = (
 				9BE413FA1EBE1FA500ACBC40 /* AppDelegate.swift */,
 				9BE413FF1EBE1FA500ACBC40 /* MasterViewController.swift */,
+				9BE414011EBE1FA500ACBC40 /* DetailViewController.swift */,
 				9BE414111EBE411200ACBC40 /* LoginViewController.swift */,
 				9BE414131EBE411F00ACBC40 /* RegisterViewController.swift */,
-				9BE414011EBE1FA500ACBC40 /* DetailViewController.swift */,
+				9BE415F41EBE552900ACBC40 /* DestinationViewController.swift */,
+				9B75DFC51EDF91D200F11AD6 /* DetourViewController.swift */,
+				9BE415F81EBE5F6E00ACBC40 /* TaskViewController.swift */,
 				9BE414031EBE1FA500ACBC40 /* Main.storyboard */,
 				9BE414151EBE49E400ACBC40 /* LoginRegister.storyboard */,
 				9BE414061EBE1FA500ACBC40 /* Assets.xcassets */,
@@ -152,10 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B75DFC61EDF91D200F11AD6 /* DetourViewController.swift in Sources */,
+				9BE415F51EBE552900ACBC40 /* DestinationViewController.swift in Sources */,
 				9BE413FE1EBE1FA500ACBC40 /* Detour.xcdatamodeld in Sources */,
 				9BE413FB1EBE1FA500ACBC40 /* AppDelegate.swift in Sources */,
 				9BE414001EBE1FA500ACBC40 /* MasterViewController.swift in Sources */,
 				9BE414141EBE411F00ACBC40 /* RegisterViewController.swift in Sources */,
+				9BE415F91EBE5F6E00ACBC40 /* TaskViewController.swift in Sources */,
 				9BE414121EBE411200ACBC40 /* LoginViewController.swift in Sources */,
 				9BE414021EBE1FA500ACBC40 /* DetailViewController.swift in Sources */,
 			);

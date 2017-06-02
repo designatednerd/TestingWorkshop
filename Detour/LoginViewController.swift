@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.errorLabel.text = ""
     }
-
     
     // MARK: - Actions 
     
