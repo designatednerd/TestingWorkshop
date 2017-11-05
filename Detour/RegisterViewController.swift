@@ -73,7 +73,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     func validateTextFields() {
         var errors = [String]()
         if let emailText = self.emailTextField.text {
-            if emailText.characters.count == 0 {
+            if emailText.count == 0 {
                 errors.append("Email cannot be empty.")
             } else if !emailText.contains("@") {
                 errors.append("Email must include an @.")
@@ -101,7 +101,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             password == confirmPassword {
             if password.isEmpty {
                 errors.append("Password and confirm password cannot be empty.")
-            } else if password.characters.count < 6 {
+            } else if password.count < 6 {
                 errors.append("Password must be at least 6 characters long.")
             } else {
                 //Password is valid.

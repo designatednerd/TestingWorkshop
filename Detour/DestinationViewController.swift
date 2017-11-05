@@ -171,7 +171,7 @@ class DestinationViewController: UIViewController, UITextFieldDelegate, UITableV
         self.dismiss(animated: true)
     }
     
-    func datePickerValueChanged() {
+    @objc func datePickerValueChanged() {
         switch self.dateSelection {
         case .none:
             assertionFailure("You shouldn't be able to get here if you're setting the appropriate mode")

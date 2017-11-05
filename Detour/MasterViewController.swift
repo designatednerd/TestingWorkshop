@@ -112,7 +112,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return users.first
     }
     
-    func insertNewObject(_ sender: Any) {
+    @objc func insertNewObject(_ sender: Any) {
         self.performSegue(withIdentifier: "AddDestinationSegue", sender: sender)
     }
 
