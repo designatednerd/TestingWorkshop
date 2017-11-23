@@ -51,25 +51,27 @@ class LoginViewController: UIViewController {
         request.httpBody = bodyData
         URLSession.shared.dataTask(with: request) {
             data, response, error in
-            
-            self.submitButton.isEnabled = true
-            
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let context = appDelegate.persistentContainer.viewContext
-            let user = User(context: context)
-            user.emailAddress = email
-            
-            // Save the context.
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+          
+            DispatchQueue.main.async {
+              self.submitButton.isEnabled = true
+              
+              let appDelegate = UIApplication.shared.delegate as! AppDelegate
+              let context = appDelegate.persistentContainer.viewContext
+              let user = User(context: context)
+              user.emailAddress = email
+              
+              // Save the context.
+              do {
+                  try context.save()
+              } catch {
+                  // Replace this implementation with code to handle the error appropriately.
+                  // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                  let nserror = error as NSError
+                  fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+              }
+              
+              self.dismiss(animated: true, completion: nil)
             }
-            
-            self.dismiss(animated: true, completion: nil)
         }.resume()
     }
     
