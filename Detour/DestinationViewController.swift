@@ -188,8 +188,8 @@ class DestinationViewController: UIViewController, UITextFieldDelegate, UITableV
         
         let destination = Destination(context: context)
         destination.name = self.nameTextField.text
-        destination.arriveDate = self.arriveDate as NSDate?
-        destination.departDate = self.departDate as NSDate?
+        destination.arriveDate = self.arriveDate
+        destination.departDate = self.departDate
         
         do {
             try context.save()
