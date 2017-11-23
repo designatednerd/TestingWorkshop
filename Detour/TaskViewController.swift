@@ -65,7 +65,8 @@ class TaskViewController: UIViewController, UITextFieldDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
+        self.errorLabel.text = nil
         let editable = self.isEditable
         self.isEditable = editable
     }
@@ -74,20 +75,21 @@ class TaskViewController: UIViewController, UITextFieldDelegate, UITableViewData
     
     @IBAction func saveTask() {
         self.validateData()
-        if let errors = self.errorLabel.text,
-            !errors.isEmpty {
-            self.createTask()
-        } else {
-            self.errorLabel.isHidden = true
+      
+        guard self.errorLabel.text?.isEmpty ?? true else {
+          return
         }
+      
+        self.createTask()
+        self.errorLabel.isHidden = true
     }
     
     @IBAction func addPro() {
-        //TODO
+        NSLog("Not implemented: Adding a pro")
     }
     
     @IBAction func addCon() {
-        //TODO
+        NSLog("Not yet implemented: Adding a con")
     }
     
     // MARK: - Saving
